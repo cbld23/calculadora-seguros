@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-// Comprobar que viene del paso correcto
+
 if (!isset($_SESSION['cliente_mapfre']) || $_SESSION['cliente_mapfre'] !== 'si') {
     header('Location: step6.php');
     exit;
@@ -95,7 +95,6 @@ require_once __DIR__ . '/../includes/header.php';
         }
     }
 
-    // Habilitar el botón ACEPTAR si el campo no está vacío
     document.getElementById('numero_documento').addEventListener('input', function() {
         const btnAceptar = document.getElementById('btnAceptar');
         if (this.value.trim().length > 0) {
@@ -107,12 +106,12 @@ require_once __DIR__ . '/../includes/header.php';
         }
     });
 
-    // Al cargar la página, marcar el botón correcto y actualizar placeholder
+
     window.onload = function() {
         <?php if (isset($_SESSION['tipo_documento'])): ?>
         selectDoc('<?= $_SESSION['tipo_documento'] ?>');
         <?php else: ?>
-        selectDoc('NIF'); // por defecto
+        selectDoc('NIF'); 
         <?php endif; ?>
     };
     </script>

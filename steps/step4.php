@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-// Verificar que los pasos anteriores se hayan completado
+
 if (!isset($_SESSION['fecha_inicio']) || !isset($_SESSION['codigo_postal']) || !isset($_SESSION['numero_asegurados'])) {
     header('Location: ../index.php');
     exit;
@@ -9,9 +9,9 @@ if (!isset($_SESSION['fecha_inicio']) || !isset($_SESSION['codigo_postal']) || !
 
 $progreso = 40;
 $stepAnterior = "step3.php";
-$stepSiguiente = "step5.php"; // Ahora sí hay siguiente paso
+$stepSiguiente = "step5.php"; 
 
-// Si vienen datos nuevos de asegurados, los guardamos
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $numero_asegurados = $_SESSION['numero_asegurados'];
 
@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'parentesco' => $_POST['parentesco_' . $i]
         ];
     }
-    // Consolidar los datos de asegurados en un solo array para guardar en la BD
+    
     $datos_asegurados = [];
 
     for ($i = 1; $i <= $numero_asegurados; $i++) {
@@ -33,7 +33,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         ];
     }
 
-    // Guardamos como JSON en sesión
     $_SESSION['datos_asegurados'] = json_encode($datos_asegurados);
     error_log("DEBUG datos_asegurados => " . $_SESSION['datos_asegurados']);
 
@@ -61,7 +60,7 @@ require_once __DIR__ . '/../includes/header.php';
         </div>
 
         <?php
-        // Verificamos si ya se han rellenado los datos de todos los asegurados
+        
         $datosCompletos = true;
         for ($i = 1; $i <= $_SESSION['numero_asegurados']; $i++) {
             if (empty($_SESSION['asegurado_' . $i]['nacimiento']) || empty($_SESSION['asegurado_' . $i]['sexo']) || ($i > 1 && empty($_SESSION['asegurado_' . $i]['parentesco']))) {

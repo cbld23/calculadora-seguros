@@ -105,7 +105,7 @@ require_once __DIR__ . '/../includes/header.php';
                             <h2><?= [29, 102, 140][$i - 1] ?> <small>€/mes</small></h2>
                             <div class="mt-auto">
                                 <div class="d-grid gap-2 my-3">
-                                    <button class="btn btn-warning" onclick="abrirFormularioAmpliado()">ME INTERESA</button>
+                                    <button class="btn btn-warning" onclick="window.location.href='https://muvraline.com/es/contacto/'">ME INTERESA</button>
                                     <button class="btn btn-dark" onclick="abrirModalAgente()">QUIERO HABLAR CON UN AGENTE</button>
                                 </div>
                                 <a href="generar_presupuesto.php" class="text-warning small">Presupuesto</a>
@@ -117,8 +117,8 @@ require_once __DIR__ . '/../includes/header.php';
         </div>
 
         <div class="text-center mt-4">
-            <a href="modificar_datos.php" target="_blank" class="btn btn-outline-warning mx-2">Modificar datos</a>
-            <a href="comparativa.php" target="_blank" class="btn btn-outline-warning mx-2">Ver comparativa</a>
+            <a href="step7.php" class="btn btn-outline-warning mx-2">Modificar datos</a>
+            <a href="comparativa.php" class="btn btn-outline-warning mx-2">Ver comparativa</a>
         </div>
     </div>
 

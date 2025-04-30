@@ -45,11 +45,11 @@ require_once __DIR__ . '/../includes/header.php';
     </div>
 
     <div class="container mt-5">
-        <h1 class="text-center">¡Ya casi hemos terminado!</h1> <!-- Centrar título -->
-        <p class="text-center">Si lo deseas, indícanos los siguientes datos, por si fuera necesario contactar contigo:</p> <!-- Centrar texto -->
+        <h1 class="text-center">¡Ya casi hemos terminado!</h1> 
+        <p class="text-center">Si lo deseas, indícanos los siguientes datos, por si fuera necesario contactar contigo:</p> 
 
-        <div class="d-flex justify-content-center"> <!-- Centramos el form -->
-            <form method="POST" class="row g-3 col-md-6"> <!-- Form más pequeño -->
+        <div class="d-flex justify-content-center"> 
+            <form method="POST" class="row g-3 col-md-6"> 
 
                 <div class="col-12">
                     <input

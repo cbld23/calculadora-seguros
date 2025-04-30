@@ -1,7 +1,6 @@
 <?php
 session_start();
 
-// Comprobar si viene del paso anterior
 if (!isset($_SESSION['dental'])) {
   header('Location: step5.php');
   exit;
@@ -9,13 +8,13 @@ if (!isset($_SESSION['dental'])) {
 
 $progreso = 70;
 $stepAnterior = "step5.php";
-$stepSiguiente = null; // No puede avanzar hasta elegir opción
+$stepSiguiente = null; 
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   if (isset($_POST['cliente_mapfre'])) {
     $_SESSION['cliente_mapfre'] = $_POST['cliente_mapfre'];
 
-    // Redirigir dependiendo de si es cliente o no
+    
     if ($_POST['cliente_mapfre'] === 'si') {
       header('Location: step6-1.php'); // Si es cliente, pedir documento
     } else {
@@ -53,7 +52,7 @@ require_once __DIR__ . '/../includes/header.php';
     </div>
 
     <div class="container">
-        <h1>¿Tienes algún seguro contratado en MAPFRE?</h1>
+        <h1>¿Tienes algún seguro contratado en Muvraline?</h1>
 
         <form action="" method="POST">
             <select class="input_generic" name="cliente_mapfre" required>

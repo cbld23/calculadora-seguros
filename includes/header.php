@@ -18,7 +18,7 @@
         <div class="encabezado-centrado">
             <h1>Calcula el precio de tu Seguro de Salud</h1>
         </div>
-        <button class="btn-llamada" onclick="abrirModalAgente()">TE LLAMAMOS GRATIS</button>
+        <button class="btn-llamada" onclick="window.location.href='https://muvraline.com/es/contacto/'">TE LLAMAMOS GRATIS</button>
     </header>
 
     <main>

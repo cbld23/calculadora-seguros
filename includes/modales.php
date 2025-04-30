@@ -69,7 +69,7 @@
                     </label>
                 </div>
 
-                <button class="btn btn-warning w-100" disabled>Te llamamos gratis</button>
+                <button class="btn btn-warning w-100">Te llamamos gratis</button>
             </div>
         </div>
     </div>

@@ -9,13 +9,13 @@ if (!isset($_SESSION['asegurado_1'])) {
 
 $progreso = 60;
 $stepAnterior = "step4.php";
-$stepSiguiente = null; // Bloqueado hasta que rellene "dental"
+$stepSiguiente = null; 
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['dental'])) {
         $_SESSION['dental'] = $_POST['dental'];
 
-        // Redirigir al siguiente paso
+        
         header('Location: step6.php');
         exit;
     }
